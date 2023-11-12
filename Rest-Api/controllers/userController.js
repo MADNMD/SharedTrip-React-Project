@@ -126,4 +126,50 @@ router.get('/logout', (req, res) => {
     res.status(200);
 });
 
+router.post('/like/:userId', async (req, res) => {
+
+    try {
+
+        const userId = req.params.userId;
+        const user = await userServices.getUser(userId);
+
+        if (!user) {
+            return res.status(404).json({ error: 'Workout not found' })
+        }
+
+        if (user.likes.includes(userId)) {
+            return res.status(400).json({ error: 'User already liked thish workout' })
+        }
+
+        user.likes.push(userId);
+        await user.save();
+
+        res.json(user);
+    } catch (error) {
+        console.error('Error while liking the post:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
+router.post('/unlike/:userId', async (req, res) => {
+
+    try {
+
+        const userId = req.params.userId;
+        const user = await userServices.getUser(userId);
+
+        if (!user) {
+            return res.status(404).json({ error: 'Workout not found' });
+        }
+
+        user.likes = user.likes.filter(likedUserId => likedUserId != userId);
+        await user.save();
+
+        res.json(user);
+    } catch (error) {
+        console.error('Error while liking the post:', error);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
+
 module.exports = router;
