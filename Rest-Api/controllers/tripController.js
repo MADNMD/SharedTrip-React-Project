@@ -129,4 +129,21 @@ router.get('/myTrips/:userId', async (req, res) => {
     }
 });
 
+router.post('/add-comments/:tripId', async (req, res) => {
+
+    try {
+
+        const { tripId } = req.params.tripId;
+        const { userId, text } = req.body;
+
+        const updateTripComment = await tripServices.addCommentToTrip(tripId, userId, text);
+
+        res.status(200).json(updateTripComment);
+    } catch (error) {
+        res.status(400).json({
+            message: getErrorMessage(error)
+        });
+    }
+});
+
 module.exports = router;
