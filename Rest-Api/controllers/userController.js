@@ -60,14 +60,14 @@ router.post('/login', async (req, res) => {
     }
 });
 
-router.get('/user', async (req, res) => {
+router.get('/user/:userId', async (req, res) => {
 
     try {
 
-        const userId = req.user._id;
+        const userId = req.params.userId;
 
         const user = await userServices.getUser(userId);
-
+      
         res.json({
             firstname: user.firstname,
             lastname: user.lastname,
@@ -75,7 +75,7 @@ router.get('/user', async (req, res) => {
             email: user.email,
             profilePicture: user.profilePicture,
             telefon: user.telefon,
-            password: user.password,
+            // password: user.password,
             _id: user._id
         });
 
@@ -88,7 +88,7 @@ router.put('/edit/:userId', async (req, res) => {
 
     try {
 
-        const userId = req.user._id;
+        const userId = req.params.userId;
         const { firstname, lastname, username, email, profilePicture, telefon } = req.body;
 
         const updateUserData = { firstname, lastname, username, email, profilePicture, telefon };
@@ -107,7 +107,7 @@ router.delete('/delete/:userId', async (req, res) => {
 
     try {
 
-        const userId = req.user._id;
+        const userId = req.params.userId;
 
         await userServices.deleteUser(userId);
 
@@ -124,52 +124,6 @@ router.get('/logout', (req, res) => {
     res.clearCookie(COOKIE_SESION_NAME);
     res.json({});
     res.status(200);
-});
-
-router.post('/like/:userId', async (req, res) => {
-
-    try {
-
-        const userId = req.params.userId;
-        const user = await userServices.getUser(userId);
-
-        if (!user) {
-            return res.status(404).json({ error: 'Workout not found' })
-        }
-
-        if (user.likes.includes(userId)) {
-            return res.status(400).json({ error: 'User already liked thish workout' })
-        }
-
-        user.likes.push(userId);
-        await user.save();
-
-        res.json(user);
-    } catch (error) {
-        console.error('Error while liking the post:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
-});
-
-router.post('/unlike/:userId', async (req, res) => {
-
-    try {
-
-        const userId = req.params.userId;
-        const user = await userServices.getUser(userId);
-
-        if (!user) {
-            return res.status(404).json({ error: 'Workout not found' });
-        }
-
-        user.likes = user.likes.filter(likedUserId => likedUserId != userId);
-        await user.save();
-
-        res.json(user);
-    } catch (error) {
-        console.error('Error while liking the post:', error);
-        res.status(500).json({ error: 'Internal Server Error' });
-    }
 });
 
 module.exports = router;
