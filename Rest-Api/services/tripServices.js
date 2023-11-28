@@ -1,13 +1,21 @@
 const Trip = require('../models/Trip');
+
 const commentServices = require('../services/commentServices');
-// exports.getAllTrip = async () => {
 
-//     const allTrip = await Trip.find();
+exports.getAllTrip = async (query, page, limit) => {
 
-//     return allTrip;
-// }
-
-exports.getAllTrip = async () => Trip.find();
+    try {
+        const trips = Trip.find(query)
+            .populate('owner')
+            .sort({ createdAt: 'desc' })
+            .skip((page - 1) * limit)
+            .limit(Number(limit));
+        return trips
+    } catch (error) {
+        console.error('Error fetching trips:', error);
+        throw error;
+    }
+}
 
 exports.createTrip = (tripData) => Trip.create(tripData);
 
@@ -17,7 +25,7 @@ exports.editTrip = (tripId, tripData) => Trip.updateOne({ _id: tripId }, { $set:
 
 exports.deleteTrip = (tripId) => Trip.findByIdAndDelete(tripId);
 
-exports.myTrip = (userId) => Trip.find({ userId });
+exports.myTrip = (userId) => Trip.find({ owner: userId }).populate('owner');
 
 exports.addCommentToTrip = async (tripId, userId, text) => {
     const comment = await commentServices.addComment(userId, text);
