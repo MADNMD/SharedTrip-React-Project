@@ -7,9 +7,21 @@ router.get('/allTrip', async (req, res) => {
 
     try {
 
-        const { trips } = await tripServices.getAllTrip();
+        const { page = 1, limit = 10, search } = req.query;
 
-        res.json({ trips });
+        let query = {}
+        if (search) {
+            const searchRegex = new RegExp(search, 'i');
+            query = {
+                $or: [
+                    { cityOfDeparture: { $regex: searchRegex } },
+                    { car: { $regex: searchRegex } },
+                ],
+            };
+        }
+        const trips = await tripServices.getAllTrip(query, page, limit);
+
+        res.json(trips);
     } catch (error) {
         res.status(400).json({
             message: getErrorMessage(error)
@@ -61,11 +73,11 @@ router.post('/createTrip', async (req, res) => {
             comments,
             owner,
         });
-
         res.status(201).json(createTrip);
     } catch (error) {
         res.status(400).json({
-            message: getErrorMessage(error)
+            message: error.message
+            // message: getErrorMessage(error)
         });
     }
 });
@@ -133,7 +145,7 @@ router.post('/add-comments/:tripId', async (req, res) => {
 
     try {
 
-        const { tripId } = req.params.tripId;
+        const tripId = req.params.tripId;
         const { userId, text } = req.body;
 
         const updateTripComment = await tripServices.addCommentToTrip(tripId, userId, text);
