@@ -6,7 +6,7 @@ const { COOKIE_SESION_NAME } = require('../constants');
 exports.auth = (req, res, next) => {
 
     const token = req.cookies[COOKIE_SESION_NAME];
-
+    
     if (token) {
         jwt.verify(token, SECRET, ((err, decodedToken) => {
             if (err) {
@@ -16,7 +16,7 @@ exports.auth = (req, res, next) => {
             }
 
             req.user = decodedToken;
-            req.locals.user = decodedToken;
+            res.locals.user = decodedToken;
 
             next();
         }));
@@ -28,19 +28,19 @@ exports.auth = (req, res, next) => {
 
 // const token = req.header('Authorization');
 
-    // if (token) {
+// if (token) {
 
-    //     try {
-    //         const decodedToken = jwt.verify(token, SECRET);
+//     try {
+//         const decodedToken = jwt.verify(token, SECRET);
 
-    //         req.user = decodedToken;
+//         req.user = decodedToken;
 
-    //         next();
-    //     } catch (error) {
-    //         res.status(401).json({
-    //             message: 'You are not auhtorized!',
-    //         })
-    //     }
-    // } else {
-    //     next();
-    // }
+//         next();
+//     } catch (error) {
+//         res.status(401).json({
+//             message: 'You are not auhtorized!',
+//         })
+//     }
+// } else {
+//     next();
+// }
