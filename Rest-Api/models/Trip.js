@@ -29,15 +29,15 @@ const tripSchema = new mongoose.Schema({
     car: {
         type: String,
         required: [true, 'Car field is required!'],
-        minLength: [3, 'Car field should be at least 3 characters'],
-        maxLength: [15, 'Car field must be no more 15 characters'],
+        minLength: [2, 'Car field should be at least 2 characters!'],
+        maxLength: [15, 'Car field must be no more 15 characters!'],
 
     },
 
     model: {
         type: String,
         required: [true, 'Car model is required!'],
-        minLength: [3, 'Car model should be at least 3 characters'],
+        // minLength: [1, 'Car model should be at least 3 characters'],
         maxLength: [15, 'Car model must be no more 15 characters'],
     },
 
@@ -72,43 +72,43 @@ const tripSchema = new mongoose.Schema({
     currency: {
         type: String,
         required: [true, 'Currency field is required!'],
-        enum: ['Lv', 'Eu']
+        enum: ['lv', 'eu']
     },
 
     airConditioner: {
         type: String,
         required: [true, 'Air conditioner field is required!'],
-        enum: ['Yes', 'No']
+        enum: ['yes', 'no']
     },
 
     food: {
         type: String,
         required: [true, 'Food field is required!'],
-        enum: ['Yes', 'No']
+        enum: ['yes', 'no']
     },
 
     drinks: {
         type: String,
         required: [true, 'Drinks field is required'],
-        enum: ['Yes', 'No']
+        enum: ['yes', 'no']
     },
 
     luggageSpace: {
         type: String,
         required: [true, 'Luggage space field is required!'],
-        enum: ['Yes', 'No'],
+        enum: ['yes', 'no'],
     },
 
     pets: {
         type: String,
         required: [true, 'Pets field is required!'],
-        enum: ['Yes', 'No'],
+        enum: ['yes', 'no'],
     },
 
     smokers: {
         type: String,
         required: [true, 'Smokers field is required!'],
-        enum: ['Yes', 'No'],
+        enum: ['yes', 'no'],
     },
 
     comments: [{
@@ -120,8 +120,7 @@ const tripSchema = new mongoose.Schema({
         type: mongoose.Types.ObjectId,
         ref: 'User',
     },
-
-});
+}, { timestamps: true });
 
 const Trip = mongoose.model('Trip', tripSchema);
 
