@@ -24,14 +24,12 @@ const userSchema = new mongoose.Schema({
         required: [true, 'Username is required!'],
         minLength: [3, 'Username should be at least 3 characters!'],
         maxLength: [15, 'Username must be no more than 15 characters!'],
-        unique: true,
     },
 
     email: {
         type: String,
         required: [true, 'Email is required!'],
         match: [/^[a-zA-Z0-9.,!-_]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/, 'Invalid email'],
-        unique: true,
     },
 
     profilePicture: {
@@ -43,7 +41,6 @@ const userSchema = new mongoose.Schema({
     telefon: {
         type: String,
         required: [true, 'Telefon is required!'],
-        match: [/^08\d{2}\d{6}$/],
     },
 
     password: {
@@ -54,9 +51,9 @@ const userSchema = new mongoose.Schema({
 
     likes: [{
         type: mongoose.Types.ObjectId,
-        ref: 'User',
+        ref: 'Like',
     }],
-});
+}, { timestamps: true });
 
 userSchema.pre('save', async function () {
 
