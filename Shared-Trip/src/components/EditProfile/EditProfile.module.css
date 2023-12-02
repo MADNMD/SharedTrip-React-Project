@@ -82,3 +82,9 @@
     color: var(--background);
     transform: scale(1.1);
 }
+
+.edit-profile-errors {
+    color: red;
+    font-size: 0.7em;
+    margin-top: 0.2em;
+}
