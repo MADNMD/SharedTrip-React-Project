@@ -51,7 +51,10 @@ export const EditProfile = () => {
                                         placeholder="Ivan"
                                         value={values.firstname}
                                         onChange={changeHandler}
+                                        onBlur={onBlurHandler}
+                                        onFocus={onFocusHandler}
                                     />
+                                    {touched.firstname && errors.firstname && <span className={styles['edit-profile-errors']}>{errors.firstname}</span>}
                                 </div>
                                 <div className={styles['form-row']}>
                                     <label htmlFor="username">Username</label>
@@ -62,7 +65,10 @@ export const EditProfile = () => {
                                         placeholder="Ivan0000"
                                         value={values.username}
                                         onChange={changeHandler}
+                                        onBlur={onBlurHandler}
+                                        onFocus={onFocusHandler}
                                     />
+                                    {touched.username && errors.username && <span className={styles['edit-profile-errors']}>{errors.username}</span>}
                                 </div>
                             </div>
                             <div className={styles['form-group-edit']}>
@@ -75,7 +81,10 @@ export const EditProfile = () => {
                                         placeholder="Ivanov"
                                         value={values.lastname}
                                         onChange={changeHandler}
+                                        onBlur={onBlurHandler}
+                                        onFocus={onFocusHandler}
                                     />
+                                    {touched.lastname && errors.lastname && <span className={styles['edit-profile-errors']}>{errors.lastname}</span>}
                                 </div>
                                 <div className={styles['form-row']}>
                                     <label htmlFor="email">Email</label>
@@ -86,7 +95,10 @@ export const EditProfile = () => {
                                         placeholder="Ivan@abv.bg"
                                         value={values.email}
                                         onChange={changeHandler}
+                                        onBlur={onBlurHandler}
+                                        onFocus={onFocusHandler}
                                     />
+                                    {touched.email && errors.email && <span className={styles['edit-profile-errors']}>{errors.email}</span>}
                                 </div>
                             </div>
                             <div className={styles['form-group-edit']}>
@@ -99,7 +111,10 @@ export const EditProfile = () => {
                                         placeholder="https://..."
                                         value={values.profilePicture}
                                         onChange={changeHandler}
+                                        onBlur={onBlurHandler}
+                                        onFocus={onFocusHandler}
                                     />
+                                    {touched.profilePicture && errors.profilePicture && <span className={styles['edit-profile-errors']}>{errors.profilePicture}</span>}
                                 </div>
                             </div>
                             <div className={styles['form-group-edit']}>
@@ -112,7 +127,10 @@ export const EditProfile = () => {
                                         placeholder="0888123456"
                                         value={values.telefon}
                                         onChange={changeHandler}
+                                        onBlur={onBlurHandler}
+                                        onFocus={onFocusHandler}
                                     />
+                                    {touched.telefon && errors.telefon && <span className={styles['edit-profile-errors']}>{errors.telefon}</span>}
                                 </div>
                             </div>
                             <div className={styles['edit-btn-trip']}>
