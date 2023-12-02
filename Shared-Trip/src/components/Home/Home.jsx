@@ -58,7 +58,7 @@ export const Home = () => {
 
                     <div className={styles['user-card']}>
                         <div className={styles['user-card-media']}>
-                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t39.30808-6/347256275_6611723622193216_7199378642563830927_n.jpg?stp=c0.169.1536.1536a_cp6_dst-jpg_s851x315&_nc_cat=104&ccb=1-7&_nc_sid=5f2048&_nc_ohc=QgOKRxu86BUAX-50Aw6&_nc_ht=scontent.fsof11-1.fna&oh=00_AfDkPVT_i3Sw2N1xp5IjbNo5xRHY1zZ7QOV35rn4B0NYew&oe=656AF6F6" alt="" />
+                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t39.30808-6/345169709_1248405912770886_2259216878399975591_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=GXjxS_7Y1fMAX-f55_Y&_nc_ht=scontent.fsof11-1.fna&oh=00_AfB7JZSEGUVHV1evarz_GbtxN6dCgozIIDYO2dSIkt0Dzw&oe=657050F3" alt="" />
                         </div>
                         <div className={styles['user-card-content']}>
                             <h5>Georgi Petrov</h5>
@@ -72,7 +72,7 @@ export const Home = () => {
 
                     <div className={styles['user-card']}>
                         <div className={styles['user-card-media']}>
-                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t39.30808-6/381507824_6553514118067071_5255247589326828908_n.jpg?stp=c0.169.1536.1536a_dst-jpg_s851x315&_nc_cat=107&ccb=1-7&_nc_sid=5f2048&_nc_ohc=YzRVtCFm2jsAX_tm8I1&_nc_ht=scontent.fsof11-1.fna&oh=00_AfB027CSUOLMM_3nixdt3_bAwuse1M5bym9SPGseEp6Png&oe=656A8A98" alt="" />
+                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t1.6435-9/45304557_10217440315102050_1035466651711045632_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7a1959&_nc_ohc=fexsfaNcQa4AX-CEYWx&_nc_ht=scontent.fsof11-1.fna&oh=00_AfABGlV590Mr1Nq6NHyI25D8ITxzJHlBurV9lDl5Hm0W4g&oe=6592C1FB" alt="" />
                         </div>
                         <div className={styles['user-card-content']}>
                             <h5>Svilen Ivanov</h5>
