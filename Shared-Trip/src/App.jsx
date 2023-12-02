@@ -16,8 +16,7 @@ import { NotFound } from "./components/NotFound";
 import { Profile } from "./components/Profile";
 import { TripDetails } from "./components/TripDetails";
 import { Logout } from "./components/Logout";
-import { LikedStatusProvider } from "./contexts/LikeContext";
-import { RouteGuard } from "./components/common/RouteGuard";
+import { RouteGuard } from "./components/RouteGuards/RouteGuard";
 
 function App() {
 
