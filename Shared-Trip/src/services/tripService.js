@@ -65,9 +65,11 @@ export const editTrip = async (tripId, tripData) => {
 export const deleteTrip = async (tripId) => {
 
     try {
-        await requester.del(`/trips/delete/${tripId}`)
+        await requester.del(`/trips/delete/${tripId}`);
+        return Promise.resolve();
     } catch (error) {
         console.log(error);
+        return Promise.reject(error);
     }
 
 }
