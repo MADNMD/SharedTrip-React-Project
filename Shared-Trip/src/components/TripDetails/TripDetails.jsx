@@ -55,7 +55,6 @@ export const TripDetails = () => {
     useEffect(() => {
         commentService.getComments(tripId)
             .then(commentsTrip => {
-                console.log(commentsTrip)
                 setComments(commentsTrip)
             })
             .catch(err => {
