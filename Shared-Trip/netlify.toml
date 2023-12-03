@@ -1,5 +1,5 @@
 [build]
   base = "Shared-Trip"
   command = "npm run build"
-  publish = "Shared-Trip/Shared-Trip/dist"
+  publish = "Shared-Trip/dist"
   functions = "netlify/functions"
