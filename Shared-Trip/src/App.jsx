@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import { AuhtProvider } from "./contexts/AuthContext";
+import { AuthProvider  } from "./contexts/AuthContext";
 import { TripProvider } from "./contexts/TripContext";
 import { AllTrips } from "./components/AllTrips";
 import { CreateAcount } from "./components/CreateAcount";
@@ -21,7 +21,7 @@ import { RouteGuard } from "./components/RouteGuards/RouteGuard";
 function App() {
 
     return (
-        <AuhtProvider>
+        <AuthProvider>
             <TripProvider>
                 <div className="site">
                     <Navigation />
@@ -46,7 +46,7 @@ function App() {
                     <Footer />
                 </div>
             </TripProvider>
-        </AuhtProvider>
+        </AuthProvider>
     )
 }
 
