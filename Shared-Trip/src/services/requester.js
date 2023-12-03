@@ -1,4 +1,5 @@
-const hostname = 'http://localhost:3000';
+// const hostname = 'http://localhost:3000';
+const hostname = 'https://shared-trip-app.onrender.com';
 
 async function request(url, opiton) {
 
