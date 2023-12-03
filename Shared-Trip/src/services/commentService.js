@@ -14,7 +14,6 @@ export const getComments = async (tripId) => {
 
     try {
         const result = await requester.get(`/comments/get-comments/${tripId}`);
-        console.log(result);
         return result;
     } catch (error) {
         console.error('Error fetching comments:', error);
