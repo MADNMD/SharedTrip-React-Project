@@ -4,9 +4,9 @@ import { useNavigate } from 'react-router-dom';
 import { useLocaleStorage } from "../hooks/useLocaleStorage";
 import * as authService from '../services/authService';
 
-export const AuthProvider  = createContext();
+export const AuthContext  = createContext();
 
-export const AuhtProvider = ({
+export const AuthProvider = ({
     children,
 }) => {
 
