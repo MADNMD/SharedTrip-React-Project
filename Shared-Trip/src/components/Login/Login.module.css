@@ -1,3 +1,13 @@
+@media (width <= 768px) {
+    .site-login {
+        margin: 15em auto;
+    }
+
+    .site-login .container {
+        width: 350px;
+    }
+}
+
 .site-login .container {
     display: flex;
     justify-content: center;
