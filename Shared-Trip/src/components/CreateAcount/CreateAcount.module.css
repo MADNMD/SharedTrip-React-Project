@@ -1,3 +1,13 @@
+@media (width <= 768px) {
+    .site-create-account {
+        margin: 15em auto;
+    }
+
+    .site-create-account .container {
+        width: 450px;
+    }
+}
+
 .site-create-account h3 {
     text-align: center;
     padding: 1.5em 0;
