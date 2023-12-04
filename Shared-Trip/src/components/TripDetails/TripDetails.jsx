@@ -110,7 +110,7 @@ export const TripDetails = () => {
         setIsDeleteModal(false);
     }
 
-    const confirmDeleteProfile = () => {
+    const confirmDeleteTrip = () => {
         tripService.deleteTrip(tripId);
         setIsDeleteModal(false);
         navigate('/all-trips');
@@ -259,7 +259,7 @@ export const TripDetails = () => {
             }
 
             {isDeleteModal
-                ? < DeleteModal isCancel={handleCancelDelete} isConfirm={confirmDeleteProfile} />
+                ? < DeleteModal isCancel={handleCancelDelete} isConfirm={confirmDeleteTrip} />
                 : null
             }
         </>
