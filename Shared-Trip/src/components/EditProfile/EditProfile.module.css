@@ -1,3 +1,13 @@
+@media (width <=768px) {
+    .site-edit-account {
+        margin: 15em auto;
+    }
+
+    .site-edit-account .container {
+        width: 400px;
+    }
+}
+
 .site-edit-account h3 {
     text-align: center;
     padding: 1.5em 0;
