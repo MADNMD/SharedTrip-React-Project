@@ -110,14 +110,10 @@ export const TripDetails = () => {
         setIsDeleteModal(false);
     }
 
-    const confirmDeleteProfile = async () => {
-        try {
-            await tripService.deleteTrip(tripId);
-            setIsDeleteModal(false);
-            navigate('/all-trips');
-        } catch (error) {
-            console.log('Error deleting trip', error);
-        }
+    const confirmDeleteProfile = () => {
+        tripService.deleteTrip(tripId);
+        setIsDeleteModal(false);
+        navigate('/all-trips');
     }
 
     return (
