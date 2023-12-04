@@ -113,7 +113,7 @@ export const TripDetails = () => {
     const confirmDeleteTrip = () => {
         tripService.deleteTrip(tripId);
         setIsDeleteModal(false);
-        navigate('/all-trips');
+        navigate('/trip/create-trip');
     }
 
     return (
