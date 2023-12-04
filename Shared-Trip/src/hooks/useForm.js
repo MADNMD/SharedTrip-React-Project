@@ -114,10 +114,9 @@ export const useForm = (initialValues, onSubmitHandler) => {
             onSubmitHandler(values);
         } else if (validateCreateForm()) {
             onSubmitHandler(values);
+        } else {
+            onSubmitHandler(values);
         }
-
-        onSubmitHandler(values);
-        // setValues(initialValues);
     }
 
     const changeValues = (newValues) => {
