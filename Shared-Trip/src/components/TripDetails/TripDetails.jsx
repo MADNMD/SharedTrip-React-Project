@@ -112,7 +112,7 @@ export const TripDetails = () => {
 
     const confirmDeleteProfile = async () => {
         try {
-            tripService.deleteTrip(tripId);
+            await tripService.deleteTrip(tripId);
             setIsDeleteModal(false);
             navigate('/all-trips');
         } catch (error) {
