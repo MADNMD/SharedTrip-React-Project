@@ -6,7 +6,7 @@ async function request(url, opiton) {
     try {
 
         const response = await fetch(hostname + url, opiton);
-       
+
         if (response.ok !== true) {
             const err = await response.json();
             throw new Error(err.message);
@@ -14,8 +14,10 @@ async function request(url, opiton) {
 
         if (response.status === 204) {
             return response;
-        } else {
+        } else if (response.headers.has('content-type') && response.headers.get('content-type').includes('application/json')) {
             return response.json();
+        } else {
+            return response.text();
         }
 
     } catch (error) {
@@ -38,7 +40,7 @@ function createOptions(method = 'GET', data) {
     //         option.headers['Authorization'] = `Bearer ${token}`
     //     }
 
-    if(data !== undefined) {
+    if (data !== undefined) {
         option.headers['Content-Type'] = 'Application/json';
         option.body = JSON.stringify(data);
     }
