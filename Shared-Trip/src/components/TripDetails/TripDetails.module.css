@@ -162,11 +162,9 @@
     padding: 1em;
 }
 
-.driver-info .trip-info-media {
-    width: 10em;
-}
-
 .driver-info .trip-info-media img {
+    width: 10em;
+    height: 10em;
     border-radius: 50%;
 }
 
