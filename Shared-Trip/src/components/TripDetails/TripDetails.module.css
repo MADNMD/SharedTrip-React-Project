@@ -401,3 +401,8 @@ span {
 .delete-comment-pic {
     cursor: pointer;
 } 
+
+.edit-comment-pic i,
+.delete-comment-pic i {
+    color: var(--fasolid);
+}
