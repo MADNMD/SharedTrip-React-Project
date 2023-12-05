@@ -33,13 +33,10 @@
     gap: 2em;
 }
 
-.profile-media {
-    /* width: 20em; */
-}
-
 .profile-media img {
     border-radius: 50%;
     width: 10em;
+    height: 10em;
 }
 
 .profile-content ul {
