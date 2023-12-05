@@ -320,7 +320,7 @@ span {
     padding: 1em;
 }
 
-.comments ul li p {
+.comments ul li div {
     padding: 1em;
     text-align: start;
     width: 30em;
@@ -330,7 +330,7 @@ span {
     box-shadow: 10px 10px 78px 6px rgba(108, 137, 167, 0.75);
 }
 
-.comments ul li p span {
+.comments ul li div span {
     padding-right: 0.5em;
 }
 
@@ -384,3 +384,25 @@ span {
     color: var(--whiteText);
     background-color: var(--background);
 }
+
+.comment-btn {
+    text-align: end;
+}
+
+.comment-btn span i {
+    font-size: 0.7em;
+}
+
+.comment-username-pic img{
+    border-radius: 50%;
+    width: 1em;
+}
+
+.edit-comment-pic {
+    padding-left: 1em;
+}
+
+.edit-comment-pic,
+.delete-comment-pic {
+    cursor: pointer;
+} 
