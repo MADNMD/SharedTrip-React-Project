@@ -13,6 +13,8 @@ import { useAuthContext } from '../../contexts/AuthContext';
 import { DeleteModal } from "../DeleteModal";
 import { Loading } from "../Loading";
 
+import { EditCommentModal } from "../EditCommentModal"; // new
+
 export const TripDetails = () => {
 
     const { tripId } = useParams();
@@ -22,9 +24,13 @@ export const TripDetails = () => {
     const [userLiked, setUserLiked] = useState(false);
     const [isLoading, setIsLoading] = useState(true);
     const [comments, setComments] = useState([]);
+    const [editingComment, setEditingComment] = useState(null);
+    const [editedText, setEditedText] = useState(''); 
+    const [commentToDelete, setCommentToDelete] = useState(null);
     const [newComment, setNewComment] = useState('');
     const [isDeleteModal, setIsDeleteModal] = useState(false);
     const navigate = useNavigate();
+
 
     useEffect(() => {
         tripService.getOneTrip(tripId)
@@ -62,6 +68,23 @@ export const TripDetails = () => {
             })
     }, [tripId]);
 
+    const handleEditComment = (commentId, text) => {
+        setEditingComment(commentId);
+        setEditedText(text);
+    }
+
+    const handleConfirmEditComment = async (commentId, editedText) => {
+       
+        try {
+            await commentService.editComment(commentId, userId, editedText);
+            const updatedComments = await commentService.getComments(tripId);
+            setComments(updatedComments);
+            setEditingComment(null);
+        } catch (error) {
+            console.error('Error editing comment:', error);
+        }
+    }
+
     const handleAddComment = async (event) => {
         event.preventDefault();
 
@@ -73,6 +96,22 @@ export const TripDetails = () => {
             setNewComment('');
         } catch (error) {
             console.error('Error adding comment:', error);
+        }
+    }
+
+    const handleDeleteComment = async (commentId) => {
+        setCommentToDelete(commentId);
+        setIsDeleteModal(true);
+    }
+
+    const confirmDeleteComment = async (commentId) => {
+        try {
+            await commentService.deleteComment(commentId);
+            const getAllCommentsData = await commentService.getComments(tripId);
+            setComments(getAllCommentsData)
+            setIsDeleteModal(false);
+        } catch (error) {
+            console.log('Error deleting comment:', error);
         }
     }
 
@@ -111,9 +150,13 @@ export const TripDetails = () => {
     }
 
     const confirmDeleteTrip = () => {
-        tripService.deleteTrip(tripId);
-        setIsDeleteModal(false);
-        navigate('/trip/create-trip');
+        try {
+            tripService.deleteTrip(tripId);
+            setIsDeleteModal(false);
+            navigate('/all-trips');
+        } catch (error) {
+            console.log('Error deleting trip', error);
+        }
     }
 
     return (
@@ -229,11 +272,18 @@ export const TripDetails = () => {
                                         {comments.map((comment) => (
 
                                             <li key={comment._id} className={styles.comment}>
-                                                <p>
+                                                <div className={styles['comment-info']}>
                                                     <span className={styles['comment-username']}>{comment.user?.username}:</span>
                                                     {comment.text}
-                                                    <span className={styles['comment-time']}>{commentTime(comment.createdAt)}</span>
-                                                </p>
+                                                    <span className={styles['comment-time']}>{commentTime(comment.createdAt)}
+                                                        {comment.user?._id === userId &&
+                                                            <>
+                                                                <Link onClick={() => handleEditComment(comment._id, comment.text)}><span className={styles['edit-comment-pic']}><i className="fa-solid fa-pen-to-square"></i></span></Link>
+                                                                <Link onClick={() => handleDeleteComment(comment._id)}><span className={styles['delete-comment-pic']}><i className="fa-solid fa-trash"></i></span></Link>
+                                                            </>
+                                                        }
+                                                    </span>
+                                                </div>
                                             </li>
 
                                         ))}
@@ -258,8 +308,22 @@ export const TripDetails = () => {
                 </section >
             }
 
+            {editingComment && ( 
+                <EditCommentModal
+                    isOpen={true}
+                    isCancel={() => setEditingComment(null)}
+                    isConfirm={() => handleConfirmEditComment(editingComment, editedText)}
+                    editedText={editedText}
+                    setEditedText={setEditedText}
+                />
+            )}
+
             {isDeleteModal
                 ? < DeleteModal isCancel={handleCancelDelete} isConfirm={confirmDeleteTrip} />
+                : null
+            }
+            {isDeleteModal
+                ? < DeleteModal isCancel={handleCancelDelete} isConfirm={() => confirmDeleteComment(commentToDelete)} />
                 : null
             }
         </>
