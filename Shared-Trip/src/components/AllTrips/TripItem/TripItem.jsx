@@ -11,7 +11,6 @@ export const TripItem = ({
     return (
         <div className={styles['trip-card']}>
             <div className={styles['trip-media']}>
-                <img src='' alt='' />
                 <img src={trip.owner?.profilePicture} alt={`${trip.owner?.firsname} Image`} />
                 <p>{trip.owner?.firstname}</p>
             </div>
