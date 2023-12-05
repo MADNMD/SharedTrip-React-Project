@@ -20,3 +20,24 @@ export const getComments = async (tripId) => {
         throw error;
     }
 }
+
+export const editComment = async (commentId, userId, text) => {
+    
+    try {
+        const result = await requester.put(`/comments/edit-comment/${commentId}`, { userId, text });
+        return result;
+    } catch (error) {
+        console.error('Error fetching comments:', error);
+        throw error;
+    }
+}
+
+export const deleteComment = async (commentId) => {
+
+    try {
+        await requester.del(`/comments/delete-comment/${commentId}`);
+    } catch (error) {
+        console.log('Error deleting comment', error);
+        throw error;
+    }
+}
