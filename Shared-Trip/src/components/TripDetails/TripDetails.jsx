@@ -11,9 +11,9 @@ import * as commentService from '../../services/commentService';
 import { formatDate, commentTime } from '../../utils/dateUtil';
 import { useAuthContext } from '../../contexts/AuthContext';
 import { DeleteModal } from "../DeleteModal";
+import { EditCommentModal } from "../EditCommentModal";
 import { Loading } from "../Loading";
 
-import { EditCommentModal } from "../EditCommentModal"; // new
 
 export const TripDetails = () => {
 
@@ -29,6 +29,7 @@ export const TripDetails = () => {
     const [commentToDelete, setCommentToDelete] = useState(null);
     const [newComment, setNewComment] = useState('');
     const [isDeleteModal, setIsDeleteModal] = useState(false);
+    const [isDeleteCommentModal, setIsDeleteCommentModal] = useState(false);
     const navigate = useNavigate();
 
 
@@ -101,7 +102,7 @@ export const TripDetails = () => {
 
     const handleDeleteComment = async (commentId) => {
         setCommentToDelete(commentId);
-        setIsDeleteModal(true);
+        setIsDeleteCommentModal(true);
     }
 
     const confirmDeleteComment = async (commentId) => {
@@ -109,7 +110,7 @@ export const TripDetails = () => {
             await commentService.deleteComment(commentId);
             const getAllCommentsData = await commentService.getComments(tripId);
             setComments(getAllCommentsData)
-            setIsDeleteModal(false);
+            setIsDeleteCommentModal(false);
         } catch (error) {
             console.log('Error deleting comment:', error);
         }
@@ -322,7 +323,7 @@ export const TripDetails = () => {
                 ? < DeleteModal isCancel={handleCancelDelete} isConfirm={confirmDeleteTrip} />
                 : null
             }
-            {isDeleteModal
+            {isDeleteCommentModal
                 ? < DeleteModal isCancel={handleCancelDelete} isConfirm={() => confirmDeleteComment(commentToDelete)} />
                 : null
             }
