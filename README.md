@@ -75,3 +75,31 @@ To explore the app's features without registering, you can use the following tes
    # Screenshots
 
    ### Home page
+   ![My Image](https://github.com/MADNMD/SharedTrip-React-Project/blob/main/images/Home-1.png)
+   ![My Image](https://github.com/MADNMD/SharedTrip-React-Project/blob/main/images/Home-2.png)
+   ![My Image](https://github.com/MADNMD/SharedTrip-React-Project/blob/main/images/Home-3.png)
+
+   ## Login page
+   ![My Image](https://github.com/MADNMD/SharedTrip-React-Project/blob/main/images/Login.png)
+
+  ## Create acount
+  ![My Image](https://github.com/MADNMD/SharedTrip-React-Project/blob/main/images/Create-acount.png)
+
+  ## Create trip
+  ![My Image](https://github.com/MADNMD/SharedTrip-React-Project/blob/main/images/Create-trip.png)
+
+   ## All trips
+   ![My Image](https://github.com/MADNMD/SharedTrip-React-Project/blob/main/images/All-trips.png)
+
+   ## My trips
+   ![My Image](https://github.com/MADNMD/SharedTrip-React-Project/blob/main/images/My-trips.png)
+
+   ## Profile page
+   ![My Image](https://github.com/MADNMD/SharedTrip-React-Project/blob/main/images/Profile-page.png)
+
+   ## Trip details owner
+   ![My Image](https://github.com/MADNMD/SharedTrip-React-Project/blob/main/images/Trip-details-owner.png)
+
+   ## Trip details guest
+   ![My Image](https://github.com/MADNMD/SharedTrip-React-Project/blob/main/images/Trip-details-guest.png)
+    
