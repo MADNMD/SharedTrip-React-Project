@@ -154,7 +154,7 @@ export const TripDetails = () => {
         try {
             tripService.deleteTrip(tripId);
             setIsDeleteModal(false);
-            navigate('/all-trips');
+            navigate('/trip/create-trip');
         } catch (error) {
             console.log('Error deleting trip', error);
         }
