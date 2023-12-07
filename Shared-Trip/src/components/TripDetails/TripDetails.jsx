@@ -144,11 +144,11 @@ export const TripDetails = () => {
 
     const handleDelete = () => {
         setIsDeleteModal(true);
-        setIsDeleteCommentModal(false);
     }
 
     const handleCancelDelete = () => {
         setIsDeleteModal(false);
+        setIsDeleteCommentModal(false);
     }
 
     const confirmDeleteTrip = () => {
