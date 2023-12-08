@@ -46,7 +46,7 @@ To explore the app's features without registering, you can use the following tes
    - Configure your app settings and deploy your React app
 
    # Usage
-   Once you've created your cluster, set up the server, and deployed the Angular app, you can access and interact with the app using the provided URLs.
+   Once you've created your cluster, set up the server, and deployed the React app, you can access and interact with the app using the provided URLs.
 
    # API Endpoints:
      
