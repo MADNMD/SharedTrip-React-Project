@@ -25,7 +25,7 @@ export const TripDetails = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [comments, setComments] = useState([]);
     const [editingComment, setEditingComment] = useState(null);
-    const [editedText, setEditedText] = useState(''); 
+    const [editedText, setEditedText] = useState('');
     const [commentToDelete, setCommentToDelete] = useState(null);
     const [newComment, setNewComment] = useState('');
     const [isDeleteModal, setIsDeleteModal] = useState(false);
@@ -75,7 +75,7 @@ export const TripDetails = () => {
     }
 
     const handleConfirmEditComment = async (commentId, editedText) => {
-       
+
         try {
             await commentService.editComment(commentId, userId, editedText);
             const updatedComments = await commentService.getComments(tripId);
@@ -223,10 +223,10 @@ export const TripDetails = () => {
                                 <h5>Driver info</h5>
                                 <div className={styles['driver-info-columns']}>
                                     <div className={styles['trip-info-media']}>
-                                        <img src={detailsTrip.owner?.profilePicture} alt={`${detailsTrip.owner?.firstname} Picture`} 
-                                        onError={(event) => {
-                                            event.target.src = '/public/images/profile-pic.jpg'
-                                        }}
+                                        <img src={detailsTrip.owner?.profilePicture} alt={`${detailsTrip.owner?.firstname} Picture`}
+                                            onError={(event) => {
+                                                event.target.src = '/public/images/profile-pic.jpg'
+                                            }}
                                         />
                                     </div>
                                     <div className={styles['trip-info-content']}>
@@ -314,7 +314,7 @@ export const TripDetails = () => {
                 </section >
             }
 
-            {editingComment && ( 
+            {editingComment && (
                 <EditCommentModal
                     isOpen={true}
                     isCancel={() => setEditingComment(null)}
