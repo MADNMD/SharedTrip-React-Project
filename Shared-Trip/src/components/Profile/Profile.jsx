@@ -35,7 +35,7 @@ export const Profile = () => {
     const handleCancelDelete = () => {
         setIsDeleteModal(false);
     }
-    
+
     const confirmDeleteProfile = () => {
         authService.deleteProfile(userId);
         setIsDeleteModal(false);
@@ -52,7 +52,11 @@ export const Profile = () => {
                     <div className={styles.container}>
                         <div className={styles['profile-wrapper']}>
                             <div className={styles['profile-media']}>
-                                <img src={profile.profilePicture} alt="profile-picture" />
+                                <img src={profile.profilePicture} alt="profile-picture"
+                                    onError={(event) => {
+                                        event.target.src = '/public/images/profile-pic.jpg'
+                                    }}
+                                />
                             </div>
                             <div className={styles['profile-content']}>
                                 <ul>
