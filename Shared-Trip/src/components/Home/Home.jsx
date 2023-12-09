@@ -58,7 +58,7 @@ export const Home = () => {
 
                     <div className={styles['user-card']}>
                         <div className={styles['user-card-media']}>
-                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t39.30808-6/345169709_1248405912770886_2259216878399975591_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=GXjxS_7Y1fMAX-f55_Y&_nc_ht=scontent.fsof11-1.fna&oh=00_AfB7JZSEGUVHV1evarz_GbtxN6dCgozIIDYO2dSIkt0Dzw&oe=657050F3" alt="profile-pic" />
+                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t39.30808-6/401825482_1078133233629607_8528942446991156623_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=z4bD-19DSJoAX8x7f-P&_nc_ht=scontent.fsof11-1.fna&oh=00_AfD3yCjyWElEZetkXrXcl2ICbZdfYOPimhIaIWo3wp-pYQ&oe=657972E5" alt="profile-pic" />
                         </div>
                         <div className={styles['user-card-content']}>
                             <h5>Georgi Petrov</h5>
