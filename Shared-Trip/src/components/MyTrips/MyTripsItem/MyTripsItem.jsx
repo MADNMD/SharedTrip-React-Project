@@ -11,11 +11,7 @@ export const MyTripsItem = ({
     return (
         <div className={styles['my-trip-card']}>
             <div className={styles['my-trip-media']}>
-                <img src={myTrip.owner?.profilePicture} alt={`${myTrip.owner?.firstname} pic`}
-                    onError={(event) => {
-                        event.target.src = '/public/images/profile-pic.jpg'
-                    }}
-                />
+                <img src={myTrip.owner?.profilePicture} alt={`${myTrip.owner?.firstname} pic`}/>
                 <p>{myTrip.owner?.firstname}</p>
             </div>
             <div className={styles['my-trip-content-left']}>
