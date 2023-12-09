@@ -16,6 +16,7 @@ router.get('/allTrip', async (req, res) => {
                 $or: [
                     { cityOfDeparture: { $regex: searchRegex } },
                     { car: { $regex: searchRegex } },
+                    { firstname: { $regex: searchRegex } },
                 ],
             };
         }
