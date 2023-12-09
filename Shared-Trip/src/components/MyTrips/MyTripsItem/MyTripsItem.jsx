@@ -3,7 +3,7 @@ import styles from './MyTripsItem.module.css';
 
 import { Link } from "react-router-dom";
 
-import {formatDate} from '../../../utils/dateUtil'
+import { formatDate } from '../../../utils/dateUtil'
 
 export const MyTripsItem = ({
     myTrip
@@ -11,7 +11,11 @@ export const MyTripsItem = ({
     return (
         <div className={styles['my-trip-card']}>
             <div className={styles['my-trip-media']}>
-                <img src={myTrip.owner?.profilePicture} alt={`${myTrip.owner?.firstname} pic`} />
+                <img src={myTrip.owner?.profilePicture} alt={`${myTrip.owner?.firstname} pic`}
+                    onError={(event) => {
+                        event.target.src = '/public/images/profile-pic.jpg'
+                    }}
+                />
                 <p>{myTrip.owner?.firstname}</p>
             </div>
             <div className={styles['my-trip-content-left']}>
