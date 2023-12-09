@@ -223,11 +223,7 @@ export const TripDetails = () => {
                                 <h5>Driver info</h5>
                                 <div className={styles['driver-info-columns']}>
                                     <div className={styles['trip-info-media']}>
-                                        <img src={detailsTrip.owner?.profilePicture} alt={`${detailsTrip.owner?.firstname} Picture`}
-                                            onError={(event) => {
-                                                event.target.src = '/public/images/profile-pic.jpg'
-                                            }}
-                                        />
+                                        <img src={detailsTrip.owner?.profilePicture} alt={`${detailsTrip.owner?.firstname} Picture`} />
                                     </div>
                                     <div className={styles['trip-info-content']}>
                                         <ul>
