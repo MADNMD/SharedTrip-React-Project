@@ -52,11 +52,7 @@ export const Profile = () => {
                     <div className={styles.container}>
                         <div className={styles['profile-wrapper']}>
                             <div className={styles['profile-media']}>
-                                <img src={profile.profilePicture} alt="profile-picture"
-                                    onError={(event) => {
-                                        event.target.src = '/public/images/profile-pic.jpg'
-                                    }}
-                                />
+                                <img src={profile.profilePicture} alt="profile-picture" />
                             </div>
                             <div className={styles['profile-content']}>
                                 <ul>
