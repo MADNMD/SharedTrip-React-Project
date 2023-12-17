@@ -8,6 +8,14 @@
     }
 }
 
+/* .profile {
+    transition: transform 0.3s ease-in-out;
+} */
+
+/* .profile:hover {
+    transform: scale(1.05);
+} */
+
 .profile h3 {
     text-align: center;
     color: var(--whiteText);
@@ -23,6 +31,11 @@
     max-width: 450px;
     padding: 1em 2em;
     margin: 0 auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile .container:hover {
+    transform: scale(1.05);
 }
 
 .profile-wrapper {
