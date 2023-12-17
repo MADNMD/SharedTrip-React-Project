@@ -8,6 +8,11 @@
     background-color: rgba(74, 72, 72, 0.5);
     box-shadow: 10px 10px 78px 6px rgba(108, 137, 167, 0.75);
     border-radius: 0.5em;
+    transition: transform 0.3s ease-in-out;
+}
+
+.trip-card:hover {
+    transform: scale(1.05);
 }
 
 .trip-media p {
