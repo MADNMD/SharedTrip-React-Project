@@ -58,7 +58,7 @@ export const Home = () => {
 
                     <div className={styles['user-card']}>
                         <div className={styles['user-card-media']}>
-                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t39.30808-6/401825482_1078133233629607_8528942446991156623_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=efb6e6&_nc_ohc=z4bD-19DSJoAX8x7f-P&_nc_ht=scontent.fsof11-1.fna&oh=00_AfD3yCjyWElEZetkXrXcl2ICbZdfYOPimhIaIWo3wp-pYQ&oe=657972E5" alt="profile-pic" />
+                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t1.6435-9/180656785_10223322504148747_3599929349207545407_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=be3454&_nc_ohc=I095LQsVvtEAX-en-Cz&_nc_oc=AQmCL6QGZPbzDMIb2KxNrmMkHQyQg-rW6An1sYdOTElAGWHzQhMUynrVAUFCYh4DXuM&_nc_ht=scontent.fsof11-1.fna&oh=00_AfCaEjysj7bNoHv58xvBn8OmGQlWkd2kAdeh7l1G4kBvvQ&oe=65A67FAB" alt="Profile Pic" />
                         </div>
                         <div className={styles['user-card-content']}>
                             <h5>Georgi Petrov</h5>
@@ -72,7 +72,7 @@ export const Home = () => {
 
                     <div className={styles['user-card']}>
                         <div className={styles['user-card-media']}>
-                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t1.6435-9/45304557_10217440315102050_1035466651711045632_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7a1959&_nc_ohc=fexsfaNcQa4AX-CEYWx&_nc_ht=scontent.fsof11-1.fna&oh=00_AfABGlV590Mr1Nq6NHyI25D8ITxzJHlBurV9lDl5Hm0W4g&oe=6592C1FB" alt="profile-pic" />
+                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t1.6435-9/45304557_10217440315102050_1035466651711045632_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7a1959&_nc_ohc=fexsfaNcQa4AX-CEYWx&_nc_ht=scontent.fsof11-1.fna&oh=00_AfABGlV590Mr1Nq6NHyI25D8ITxzJHlBurV9lDl5Hm0W4g&oe=6592C1FB" alt="Profile Pic" />
                         </div>
                         <div className={styles['user-card-content']}>
                             <h5>Svilen Ivanov</h5>
@@ -86,7 +86,7 @@ export const Home = () => {
 
                     <div className={styles['user-card']}>
                         <div className={styles['user-card-media']}>
-                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t1.18169-9/20664184_1577679205640807_7878936832495842299_n.jpg?stp=c0.53.480.480a_dst-jpg_s851x315&_nc_cat=108&ccb=1-7&_nc_sid=c21ed2&_nc_ohc=nOVORtIDOPoAX-G_d6o&_nc_ht=scontent.fsof11-1.fna&oh=00_AfA1oIhHAACyMSdt_lVIGMmvxN8QrXxpwh5M526TAhOGVQ&oe=658D8431" alt="profile-pic" />
+                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t1.18169-9/20664184_1577679205640807_7878936832495842299_n.jpg?stp=c0.53.480.480a_dst-jpg_s851x315&_nc_cat=108&ccb=1-7&_nc_sid=c21ed2&_nc_ohc=nOVORtIDOPoAX-G_d6o&_nc_ht=scontent.fsof11-1.fna&oh=00_AfA1oIhHAACyMSdt_lVIGMmvxN8QrXxpwh5M526TAhOGVQ&oe=658D8431" alt="Profile Pic" />
                         </div>
                         <div className={styles['user-card-content']}>
                             <h5>Milena Mandjoukuva</h5>
@@ -100,7 +100,7 @@ export const Home = () => {
 
                     <div className={styles['user-card']}>
                         <div className={styles['user-card-media']}>
-                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t1.6435-9/32976668_1601185786646041_7557653672151220224_n.jpg?stp=dst-jpg_s851x315&_nc_cat=109&ccb=1-7&_nc_sid=c21ed2&_nc_ohc=JOjjXjDmck0AX-8P4no&_nc_ht=scontent.fsof11-1.fna&oh=00_AfDYKOJfI9eKJLdpvVaXkkRXL6SkRbhNM-_NM25Wtk6kiw&oe=658D67F3" alt="profile-pic" />
+                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t1.6435-9/32976668_1601185786646041_7557653672151220224_n.jpg?stp=dst-jpg_s851x315&_nc_cat=109&ccb=1-7&_nc_sid=c21ed2&_nc_ohc=JOjjXjDmck0AX-8P4no&_nc_ht=scontent.fsof11-1.fna&oh=00_AfDYKOJfI9eKJLdpvVaXkkRXL6SkRbhNM-_NM25Wtk6kiw&oe=658D67F3" alt="Profile Pic" />
                         </div>
                         <div className={styles['user-card-content']}>
                             <h5>Filip Zidarov</h5>
@@ -114,7 +114,7 @@ export const Home = () => {
 
                     <div className={styles['user-card']}>
                         <div className={styles['user-card-media']}>
-                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t1.18169-9/10666060_362001067284303_8116683269297877337_n.jpg?stp=dst-jpg_s851x315&_nc_cat=110&ccb=1-7&_nc_sid=c21ed2&_nc_ohc=518VqylvLe0AX_iNIWc&_nc_ht=scontent.fsof11-1.fna&oh=00_AfCI1V9s89yXLwo7PRmrZhrucZ_K6vM_Abk6EGmZgMC1UA&oe=658D7F61" alt="profile-pic" />
+                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t1.18169-9/10666060_362001067284303_8116683269297877337_n.jpg?stp=dst-jpg_s851x315&_nc_cat=110&ccb=1-7&_nc_sid=c21ed2&_nc_ohc=518VqylvLe0AX_iNIWc&_nc_ht=scontent.fsof11-1.fna&oh=00_AfCI1V9s89yXLwo7PRmrZhrucZ_K6vM_Abk6EGmZgMC1UA&oe=658D7F61" alt="Profile Pic" />
                         </div>
                         <div className={styles['user-card-content']}>
                             <h5>Jivka Stoycheva</h5>
@@ -128,7 +128,7 @@ export const Home = () => {
 
                     <div className={styles['user-card']}>
                         <div className={styles['user-card-media']}>
-                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t31.18172-8/14114906_10205406480479799_1077856341855556677_o.jpg?stp=dst-jpg_s851x315&_nc_cat=101&ccb=1-7&_nc_sid=c21ed2&_nc_ohc=lf1a_UlWJbIAX8wd3Kl&_nc_ht=scontent.fsof11-1.fna&oh=00_AfBGJVYmtByaGTmdn9IL_7hkN3GhxcRiyWj82h9P40BA0A&oe=658D70BA" alt="profile-pic" />
+                            <img src="https://scontent.fsof11-1.fna.fbcdn.net/v/t31.18172-8/14114906_10205406480479799_1077856341855556677_o.jpg?stp=dst-jpg_s851x315&_nc_cat=101&ccb=1-7&_nc_sid=c21ed2&_nc_ohc=lf1a_UlWJbIAX8wd3Kl&_nc_ht=scontent.fsof11-1.fna&oh=00_AfBGJVYmtByaGTmdn9IL_7hkN3GhxcRiyWj82h9P40BA0A&oe=658D70BA" alt="Profile Pic" />
                         </div>
                         <div className={styles['user-card-content']}>
                             <h5>Ivelin Raykov</h5>
